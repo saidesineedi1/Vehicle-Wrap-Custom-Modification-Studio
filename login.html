@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | AUREON CUSTOMS — VIP Client Portal</title>
+  <meta name="description"
+    content="Sign in to your Aureon Customs VIP portal to view real-time vehicle modification status, design blueprints, and scheduled studio appointments.">
+
+<link rel="icon" type="image/png" href="assets/images/aureon-logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body class="theme-dark">
+
+  <main class="auth-page-container">
+    <div class="auth-grid">
+
+<aside class="auth-visual" aria-hidden="true">
+        <div class="visual-media-bg">
+          <img src="assets/images/hero-car-1.jpg" alt="Aureon Bespoke High Performance Vehicle" class="visual-img">
+          <div class="visual-overlay"></div>
+          <div class="visual-pattern"></div>
+        </div>
+
+        <div class="visual-content">
+          <div class="visual-badge">
+            <span class="badge-dot"></span>
+            <span>AUREON PRIVATE ATELIER</span>
+          </div>
+
+          <h2 class="visual-headline">The Pinnacle of Automotive Distinction.</h2>
+          <p class="visual-subtext">
+            Bespoke color shift wraps, aerospace-grade paint protection, and custom forged carbon styling.
+          </p>
+
+          <div class="visual-features">
+            <div class="feature-item">
+              <i class="fa-solid fa-shield-halved feature-icon"></i>
+              <div>
+                <strong>Self-Healing PPF</strong>
+                <span>10-Year Studio Warranty</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-screwdriver-wrench feature-icon"></i>
+              <div>
+                <strong>Live Build Camera</strong>
+                <span>24/7 VIP Bay Access</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+<section class="auth-panel" aria-label="Sign In Section">
+        
+        <div class="header-actions auth-header-actions" id="headerActions">
+          
+          <button class="action-btn theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme"
+            title="Toggle Theme">
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun"></i>
+          </button>
+
+<button class="action-btn rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle right-to-left layout"
+            title="Toggle RTL/LTR">
+            <i class="fa-solid fa-right-left"></i>
+          </button>
+        </div>
+
+<div class="auth-card-wrap">
+          <div class="auth-card">
+
+<div class="auth-brand-center">
+              <a href="index.html" class="brand-logo auth-brand-logo" id="brandLogo" aria-label="AUREON CUSTOMS Home">
+                <img src="assets/images/aureon-logo.png" alt="Aureon Customs Shield Logo" class="brand-logo-img">
+                <div class="brand-text">
+                  <span class="brand-name">AUREON</span>
+                  <span class="brand-tagline">CUSTOMS</span>
+                </div>
+              </a>
+            </div>
+
+<div class="form-title-group">
+              <h1 class="form-title">Welcome Back</h1>
+              <p class="form-subtitle">Enter your credentials to access your vehicle builds and blueprints.</p>
+            </div>
+
+<form id="loginForm" class="auth-form" novalidate>
+              
+              <div class="form-group" id="groupEmail">
+                <label class="form-label" for="loginEmail">Email Address or VIP ID</label>
+                <div class="input-field-wrap">
+                  <i class="fa-regular fa-envelope field-icon"></i>
+                  <input type="email" id="loginEmail" class="form-input" placeholder="e.g. client@aureoncustoms.com" required autocomplete="email">
+                </div>
+                <span class="field-error-msg" id="emailErrorMsg">Please enter a valid email address</span>
+              </div>
+
+<div class="form-group" id="groupPassword">
+                <label class="form-label" for="loginPassword">Password</label>
+                <div class="input-field-wrap">
+                  <i class="fa-solid fa-lock field-icon"></i>
+                  <input type="password" id="loginPassword" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+                  <button type="button" class="pw-toggle-btn" id="togglePasswordBtn" aria-label="Show or hide password" title="Toggle password visibility">
+                    <i class="fa-regular fa-eye" id="passwordEyeIcon"></i>
+                  </button>
+                </div>
+                <span class="field-error-msg" id="passwordErrorMsg">Password must be at least 6 characters</span>
+              </div>
+
+<div class="auth-help-row">
+                <label class="remember-checkbox-label" for="rememberMeCheckbox">
+                  <input type="checkbox" id="rememberMeCheckbox" checked>
+                  <span class="custom-checkmark"></span>
+                  <span class="checkbox-text">Remember me</span>
+                </label>
+                <a href="#forgot" class="forgot-password-link" id="forgotPasswordLink">Forgot password?</a>
+              </div>
+
+<button type="submit" class="btn btn-gold btn-auth-submit" id="submitLoginBtn">
+                <span>Sign In</span>
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              </button>
+
+<div class="auth-divider">
+                <span class="divider-line"></span>
+                <span class="divider-text">or continue with</span>
+                <span class="divider-line"></span>
+              </div>
+
+<div class="social-login-grid">
+                <button type="button" class="btn-social" id="googleLoginBtn" aria-label="Sign in with Google">
+                  <i class="fa-brands fa-google social-icon google-icon"></i>
+                  <span>Google</span>
+                </button>
+                <button type="button" class="btn-social" id="appleLoginBtn" aria-label="Sign in with Apple">
+                  <i class="fa-brands fa-apple social-icon apple-icon"></i>
+                  <span>Apple</span>
+                </button>
+              </div>
+
+<div class="auth-switch-box">
+                <p class="auth-switch-text">
+                  New to this ? <a href="signup.html" class="auth-switch-link" id="toSignupLink">Create account</a>
+                </p>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+<div class="forgot-modal-backdrop" id="forgotModal" role="dialog" aria-modal="true" aria-labelledby="forgotTitle" hidden>
+    <div class="forgot-modal-card">
+      <button class="modal-close-btn" id="closeForgotModalBtn" aria-label="Close dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-crest">
+        <i class="fa-solid fa-key"></i>
+      </div>
+      <h3 class="modal-title" id="forgotTitle">Reset VIP Password</h3>
+      <p class="modal-desc">Enter your registered email address and our studio concierge will dispatch secure password reset credentials.</p>
+      <form id="forgotForm" class="forgot-form">
+        <div class="form-group">
+          <label class="form-label" for="resetEmail">Registered Email</label>
+          <div class="input-field-wrap">
+            <i class="fa-regular fa-envelope field-icon"></i>
+            <input type="email" id="resetEmail" class="form-input" placeholder="e.g. client@aureoncustoms.com" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold modal-submit-btn">
+          <span>Send Recovery Link</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<script src="login.js"></script>
+</body>
+
+</html>
