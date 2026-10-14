@@ -1,4 +1,4 @@
-﻿
+
 
 :root {
   --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -627,6 +627,8 @@ body.theme-light .kinetic-ground-shadow {
 }
 
 .error-btn-secondary {
+  position: relative !important;
+  overflow: hidden !important;
   background: var(--btn-secondary-bg);
   color: var(--btn-secondary-text) !important;
   border: 1.5px solid var(--btn-secondary-border);
@@ -635,12 +637,42 @@ body.theme-light .kinetic-ground-shadow {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
+.error-btn-secondary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -160%;
+  width: 70%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.35) 55%,
+    rgba(255, 255, 255, 0) 85%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  animation: errGlassBlinkAmbient 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.error-btn-secondary:hover::after {
+  opacity: 1;
+  animation: errGlassBlinkSweep 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 .error-btn-secondary:hover {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
+  background-color: var(--color-gold) !important;
+  border-color: var(--color-gold) !important;
   color: #102A2D !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.3);
+  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.4) !important;
 }
 
 .error-btn-secondary i {
@@ -650,7 +682,42 @@ body.theme-light .kinetic-ground-shadow {
 }
 
 .error-btn-secondary:hover i {
-  color: #102A2D;
+  color: #102A2D !important;
+}
+
+@keyframes errGlassBlinkAmbient {
+  0%, 75% {
+    left: -160%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.75;
+  }
+  90% {
+    left: 200%;
+    opacity: 0.75;
+  }
+  92%, 100% {
+    left: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes errGlassBlinkSweep {
+  0% {
+    left: -160%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 200%;
+    opacity: 0;
+  }
 }
 
 .error-sys-coords {

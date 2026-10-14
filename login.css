@@ -1,4 +1,4 @@
-﻿
+
 
 :root {
   
@@ -654,6 +654,8 @@ body.theme-dark .theme-toggle-btn .icon-sun {
 }
 
 .btn-social {
+  position: relative !important;
+  overflow: hidden !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -669,9 +671,60 @@ body.theme-dark .theme-toggle-btn .icon-sun {
   transition: all var(--transition-fast);
 }
 
+.btn-social::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -160%;
+  width: 70%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.35) 55%,
+    rgba(255, 255, 255, 0) 85%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  animation: socialGlassBlink 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.btn-social:hover::after {
+  opacity: 1;
+  animation: socialGlassBlinkSweep 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 .btn-social:hover {
-  border-color: var(--color-gold);
-  transform: translateY(-1px);
+  background-color: var(--color-gold) !important;
+  border-color: var(--color-gold) !important;
+  color: #102A2D !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.4) !important;
+}
+
+.btn-social:hover * {
+  color: #102A2D !important;
+}
+
+@keyframes socialGlassBlink {
+  0%, 75% { left: -160%; opacity: 0; }
+  80% { opacity: 0.75; }
+  90% { left: 200%; opacity: 0.75; }
+  92%, 100% { left: 200%; opacity: 0; }
+}
+
+@keyframes socialGlassBlinkSweep {
+  0% { left: -160%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: 200%; opacity: 0; }
 }
 
 .social-icon {

@@ -1,4 +1,4 @@
-﻿
+
 
 .home2-body {
   overflow-x: clip;
@@ -215,12 +215,45 @@ body.theme-dark .h2-section-lead {
   cursor: pointer;
 }
 
+.h2-hero-btn-secondary > * {
+  position: relative;
+  z-index: 3;
+}
+
 .h2-hero-btn-secondary:hover {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
-  color: #102A2D;
+  background: rgba(201, 169, 110, 0.15) !important;
+  background-color: rgba(201, 169, 110, 0.15) !important;
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.3);
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.h2-hero-btn-secondary:hover * {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 0 12px rgba(201, 169, 110, 0.5);
+}
+
+body.theme-dark .h2-hero-btn-secondary:hover {
+  background: rgba(201, 169, 110, 0.12) !important;
+  background-color: rgba(201, 169, 110, 0.12) !important;
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+  transform: translateY(-2px);
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+body.theme-dark .h2-hero-btn-secondary:hover * {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 0 12px rgba(201, 169, 110, 0.5);
 }
 
 .h2-hero-btn-primary .fa-arrow-right,
@@ -236,12 +269,13 @@ body.theme-dark .h2-section-lead {
 
 .h2-hero-btn-secondary .fa-play {
   font-size: 0.82rem;
-  color: var(--color-gold);
+  color: var(--color-gold, #DFBE85);
   transition: color var(--transition-normal);
 }
 
 .h2-hero-btn-secondary:hover .fa-play {
-  color: #102A2D;
+  color: var(--color-gold, #DFBE85) !important;
+  filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.65)) !important;
 }
 
 .h2-hero-hud-strip {
@@ -1766,7 +1800,7 @@ body.theme-dark .h2-rating-count {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 32px 28px;
+  padding: 20px 22px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1788,25 +1822,34 @@ body.theme-dark .h2-review-card {
   border-color: var(--color-gold);
 }
 
+.h2-review-card:hover .h2-review-quote-mark {
+  color: rgba(201, 169, 110, 0.5);
+}
+
 .h2-review-quote-mark {
-  color: rgba(201, 169, 110, 0.35);
-  font-size: 1.8rem;
-  margin-bottom: 14px;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: rgba(201, 169, 110, 0.25);
+  font-size: 1.35rem;
+  line-height: 1;
+  pointer-events: none;
+  transition: color var(--transition-fast);
 }
 
 .h2-review-stars {
   color: #F59E0B;
   display: flex;
-  gap: 4px;
-  font-size: 0.82rem;
-  margin-bottom: 16px;
+  gap: 3px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
 }
 
 .h2-review-text {
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 0.88rem;
+  line-height: 1.5;
   color: var(--text-primary);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   flex-grow: 1;
   font-style: italic;
 }
@@ -1818,9 +1861,9 @@ body.theme-dark .h2-review-text {
 .h2-review-author {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   border-top: 1px solid var(--border-color);
-  padding-top: 18px;
+  padding-top: 12px;
 }
 
 body.theme-dark .h2-review-author {
@@ -1828,23 +1871,24 @@ body.theme-dark .h2-review-author {
 }
 
 .h2-author-avatar {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: rgba(201, 169, 110, 0.15);
   color: var(--color-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   flex-shrink: 0;
 }
 
 .h2-author-name {
   display: block;
   font-family: var(--font-heading);
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   font-weight: 700;
+  line-height: 1.2;
   color: var(--text-primary);
 }
 
@@ -1854,9 +1898,11 @@ body.theme-dark .h2-author-name {
 
 .h2-author-vehicle {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--color-gold);
   font-weight: 600;
+  line-height: 1.2;
+  margin-top: 2px;
 }
 
 .h2-cta-section {

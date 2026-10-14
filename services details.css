@@ -1,4 +1,4 @@
-﻿
+
 
 .srvd-body {
   background-color: var(--bg-primary, #ffffff);
@@ -261,11 +261,65 @@ body.theme-dark.srvd-body {
   transition: all 0.28s ease;
 }
 
+.srvd-hero-btn-secondary > * {
+  position: relative;
+  z-index: 3;
+}
+
+.srvd-hero-btn-secondary .fa-calendar-check,
+.srvd-hero-btn-secondary i:first-child {
+  font-size: 0.95rem;
+  color: #C9A96E !important;
+  opacity: 1 !important;
+  transition: color var(--transition-normal);
+}
+
 .srvd-hero-btn-secondary:hover {
-  background: var(--srvd-bg-surface);
-  border-color: var(--srvd-gold);
-  color: var(--srvd-gold);
+  background: rgba(201, 169, 110, 0.16) !important;
+  border-color: #A67C1E !important;
+  color: #9E6F18 !important;
   transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.srvd-hero-btn-secondary:hover * {
+  color: #9E6F18 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: none !important;
+}
+
+.srvd-hero-btn-secondary:hover i {
+  color: #9E6F18 !important;
+  filter: none !important;
+}
+
+body.theme-dark .srvd-hero-btn-secondary .fa-calendar-check,
+body.theme-dark .srvd-hero-btn-secondary i:first-child {
+  color: #DFBE85 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: drop-shadow(0 0 6px rgba(201, 169, 110, 0.45));
+}
+
+body.theme-dark .srvd-hero-btn-secondary:hover {
+  background: rgba(201, 169, 110, 0.12) !important;
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+  transform: translateY(-2px);
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+body.theme-dark .srvd-hero-btn-secondary:hover * {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 0 12px rgba(201, 169, 110, 0.5);
+  filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.65)) !important;
 }
 
 .srvd-hero-metrics-ribbon {
@@ -1230,10 +1284,15 @@ body.theme-dark.srvd-body {
 }
 
 .srvd-cta-secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: #c9a96e;
-  color: #c9a96e;
+  background: var(--srvd-gold, #c9a96e) !important;
+  border-color: var(--srvd-gold, #c9a96e) !important;
+  color: #102A2D !important;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.4) !important;
+}
+
+.srvd-cta-secondary-btn:hover i {
+  color: #102A2D !important;
 }
 
 .srvd-cta-guarantees {

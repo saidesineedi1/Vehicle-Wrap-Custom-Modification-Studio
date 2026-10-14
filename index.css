@@ -1,4 +1,4 @@
-﻿
+
 
 :root {
   
@@ -272,38 +272,461 @@ body.theme-dark .btn-ghost-play:hover {
 }
 
 .btn-outline-gold {
-  border: 1.5px solid var(--color-gold);
-  color: var(--color-gold);
-  background: transparent;
+  border: 1.5px solid var(--border-color, rgba(16, 42, 45, 0.28));
+  color: var(--text-primary, #102A2D);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all var(--transition-normal);
 }
 
+.btn-outline-gold > * {
+  color: var(--text-primary, #102A2D);
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: color var(--transition-normal);
+}
+
+.btn-outline-gold span {
+  color: var(--text-primary, #102A2D);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.btn-outline-gold i {
+  color: var(--text-primary, #102A2D);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Light Mode Glass Hover: Border and content change color to rich gold */
 .btn-outline-gold:hover {
-  background-color: var(--color-gold);
-  color: var(--color-gold-text);
+  background: rgba(201, 169, 110, 0.16) !important;
+  background-color: rgba(201, 169, 110, 0.16) !important;
+  border-color: #A67C1E !important;
+  color: #9E6F18 !important;
   transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+}
+
+.btn-outline-gold:hover *,
+.btn-outline-gold:hover span {
+  color: #9E6F18 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: none !important;
+}
+
+.btn-outline-gold:hover i {
+  color: #9E6F18 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+/* Dark Mode resting & hover */
+body.theme-dark .btn-outline-gold {
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+body.theme-dark .btn-outline-gold > *,
+body.theme-dark .btn-outline-gold span,
+body.theme-dark .btn-outline-gold i {
+  color: #FFFFFF !important;
+}
+
+body.theme-dark .btn-outline-gold:hover {
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
+  background: rgba(201, 169, 110, 0.14) !important;
+  box-shadow: 0 0 25px rgba(201, 169, 110, 0.55), inset 0 0 14px rgba(201, 169, 110, 0.2) !important;
+}
+
+body.theme-dark .btn-outline-gold:hover *,
+body.theme-dark .btn-outline-gold:hover span,
+body.theme-dark .btn-outline-gold:hover i {
+  color: var(--color-gold, #DFBE85) !important;
+  text-shadow: 0 0 14px rgba(201, 169, 110, 0.6) !important;
+}
+
+/* Dark Section overrides (e.g. CTA banners on dark background) */
+.cta-section .btn-outline-gold {
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.cta-section .btn-outline-gold > *,
+.cta-section .btn-outline-gold span,
+.cta-section .btn-outline-gold i {
+  color: #FFFFFF !important;
+}
+
+.cta-section .btn-outline-gold:hover {
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
+  background: rgba(201, 169, 110, 0.14) !important;
+}
+
+.cta-section .btn-outline-gold:hover *,
+.cta-section .btn-outline-gold:hover span,
+.cta-section .btn-outline-gold:hover i {
+  color: var(--color-gold, #DFBE85) !important;
+  text-shadow: 0 0 14px rgba(201, 169, 110, 0.6) !important;
 }
 
 .btn-outline-dark {
-  border: 1.5px solid var(--color-primary);
-  color: var(--color-primary);
-  background: transparent;
+  border: 1.5px solid var(--border-color, rgba(16, 42, 45, 0.28));
+  color: var(--text-primary, #102A2D);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .btn-outline-dark:hover {
-  background-color: var(--color-primary);
-  color: #FFFFFF;
+  background: rgba(201, 169, 110, 0.16) !important;
+  background-color: rgba(201, 169, 110, 0.16) !important;
+  border-color: #A67C1E !important;
+  color: #9E6F18 !important;
   transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
 }
 
 body.theme-dark .btn-outline-dark {
   border-color: rgba(255, 255, 255, 0.35);
   color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 body.theme-dark .btn-outline-dark:hover {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: #FFFFFF;
+  background: rgba(201, 169, 110, 0.12) !important;
+  background-color: rgba(201, 169, 110, 0.12) !important;
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+}
+
+/* ==========================================================================
+   Secondary Buttons — Universal Gold Hover & Glass Blink Effect
+   ========================================================================== */
+
+.btn-secondary,
+.hero-secondary-cta,
+.btn-outline-dark,
+.btn-outline-gold,
+.h2-hero-btn-secondary,
+.h2-premium-explore-btn,
+.abt-hero-btn-secondary,
+.srv-hero-btn-secondary,
+.srvd-hero-btn-secondary,
+.srvd-cta-secondary-btn,
+.blg-hero-btn-secondary,
+.blgd-cta-secondary-btn,
+.cnt-hero-btn-secondary,
+.cnt-map-link,
+.cnt-cta-btn-modal,
+.cs-btn-secondary,
+.error-btn-secondary {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate;
+  transition: background-color var(--transition-normal),
+              border-color var(--transition-normal),
+              color var(--transition-normal),
+              box-shadow var(--transition-normal),
+              transform var(--transition-normal) !important;
+}
+
+/* Ensure all content (text, icons, calendar) sits securely above glass ribbon */
+.btn-secondary > *,
+.hero-secondary-cta > *,
+.btn-outline-dark > *,
+.btn-outline-gold > *,
+.h2-hero-btn-secondary > *,
+.h2-premium-explore-btn > *,
+.abt-hero-btn-secondary > *,
+.srv-hero-btn-secondary > *,
+.srvd-hero-btn-secondary > *,
+.srvd-cta-secondary-btn > *,
+.blg-hero-btn-secondary > *,
+.blgd-cta-secondary-btn > *,
+.cnt-hero-btn-secondary > *,
+.cnt-map-link > *,
+.cnt-cta-btn-modal > *,
+.cs-btn-secondary > *,
+.error-btn-secondary > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* Glass Blink Highlight Ribbon */
+.btn-secondary::after,
+.hero-secondary-cta::after,
+.btn-outline-dark::after,
+.btn-outline-gold::after,
+.h2-hero-btn-secondary::after,
+.h2-premium-explore-btn::after,
+.abt-hero-btn-secondary::after,
+.srv-hero-btn-secondary::after,
+.srvd-hero-btn-secondary::after,
+.srvd-cta-secondary-btn::after,
+.blg-hero-btn-secondary::after,
+.blgd-cta-secondary-btn::after,
+.cnt-hero-btn-secondary::after,
+.cnt-map-link::after,
+.cnt-cta-btn-modal::after,
+.cs-btn-secondary::after,
+.error-btn-secondary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -160%;
+  width: 70%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.35) 55%,
+    rgba(255, 255, 255, 0) 85%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  animation: glassBlinkAmbient 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Fast dazzling glass blink sweep on hover */
+.btn-secondary:hover::after,
+.hero-secondary-cta:hover::after,
+.btn-outline-dark:hover::after,
+.btn-outline-gold:hover::after,
+.h2-hero-btn-secondary:hover::after,
+.h2-premium-explore-btn:hover::after,
+.abt-hero-btn-secondary:hover::after,
+.srv-hero-btn-secondary:hover::after,
+.srvd-hero-btn-secondary:hover::after,
+.srvd-cta-secondary-btn:hover::after,
+.blg-hero-btn-secondary:hover::after,
+.blgd-cta-secondary-btn:hover::after,
+.cnt-hero-btn-secondary:hover::after,
+.cnt-map-link:hover::after,
+.cnt-cta-btn-modal:hover::after,
+.cs-btn-secondary:hover::after,
+.error-btn-secondary:hover::after {
+  opacity: 1;
+  animation: glassBlinkSweep 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Universal Glass Hover state for all secondary buttons:
+   Border and content only change color, while background remains translucent glass */
+.btn-secondary:hover,
+.hero-secondary-cta:hover,
+.btn-outline-dark:hover,
+.btn-outline-gold:hover,
+.h2-hero-btn-secondary:hover,
+.h2-premium-explore-btn:hover,
+.abt-hero-btn-secondary:hover,
+.srv-hero-btn-secondary:hover,
+.srvd-hero-btn-secondary:hover,
+.srvd-cta-secondary-btn:hover,
+.blg-hero-btn-secondary:hover,
+.blgd-cta-secondary-btn:hover,
+.cnt-hero-btn-secondary:hover,
+.cnt-map-link:hover,
+.cnt-cta-btn-modal:hover,
+.cs-btn-secondary:hover,
+.error-btn-secondary:hover {
+  background: rgba(201, 169, 110, 0.16) !important;
+  background-color: rgba(201, 169, 110, 0.16) !important;
+  border-color: #A67C1E !important;
+  color: #9E6F18 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Theme Dark Glass Hover state override */
+body.theme-dark .btn-secondary:hover,
+body.theme-dark .hero-secondary-cta:hover,
+body.theme-dark .btn-outline-dark:hover,
+body.theme-dark .btn-outline-gold:hover,
+body.theme-dark .h2-hero-btn-secondary:hover,
+body.theme-dark .h2-premium-explore-btn:hover,
+body.theme-dark .abt-hero-btn-secondary:hover,
+body.theme-dark .srv-hero-btn-secondary:hover,
+body.theme-dark .srvd-hero-btn-secondary:hover,
+body.theme-dark .srvd-cta-secondary-btn:hover,
+body.theme-dark .blg-hero-btn-secondary:hover,
+body.theme-dark .blgd-cta-secondary-btn:hover,
+body.theme-dark .cnt-hero-btn-secondary:hover,
+body.theme-dark .cnt-map-link:hover,
+body.theme-dark .cnt-cta-btn-modal:hover,
+body.theme-dark .cs-btn-secondary:hover,
+body.theme-dark .error-btn-secondary:hover {
+  background: rgba(201, 169, 110, 0.14) !important;
+  background-color: rgba(201, 169, 110, 0.14) !important;
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
+  box-shadow: 0 0 25px rgba(201, 169, 110, 0.55), inset 0 0 14px rgba(201, 169, 110, 0.2) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* All nested elements (text and icons) change to high-contrast rich gold on hover in Light Mode */
+.btn-secondary:hover *,
+.hero-secondary-cta:hover *,
+.btn-outline-dark:hover *,
+.btn-outline-gold:hover *,
+.h2-hero-btn-secondary:hover *,
+.h2-premium-explore-btn:hover *,
+.abt-hero-btn-secondary:hover *,
+.srv-hero-btn-secondary:hover *,
+.srvd-hero-btn-secondary:hover *,
+.srvd-cta-secondary-btn:hover *,
+.blg-hero-btn-secondary:hover *,
+.blgd-cta-secondary-btn:hover *,
+.cnt-hero-btn-secondary:hover *,
+.cnt-map-link:hover *,
+.cnt-cta-btn-modal:hover *,
+.cs-btn-secondary:hover *,
+.error-btn-secondary:hover * {
+  color: #9E6F18 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: none !important;
+}
+
+.btn-secondary:hover i,
+.hero-secondary-cta:hover i,
+.btn-outline-dark:hover i,
+.btn-outline-gold:hover i,
+.h2-hero-btn-secondary:hover i,
+.h2-premium-explore-btn:hover i,
+.abt-hero-btn-secondary:hover i,
+.srv-hero-btn-secondary:hover i,
+.srvd-hero-btn-secondary:hover i,
+.srvd-cta-secondary-btn:hover i,
+.blg-hero-btn-secondary:hover i,
+.blgd-cta-secondary-btn:hover i,
+.cnt-hero-btn-secondary:hover i,
+.cnt-map-link:hover i,
+.cnt-cta-btn-modal:hover i,
+.cs-btn-secondary:hover i,
+.error-btn-secondary:hover i {
+  color: #9E6F18 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+/* All nested elements (text and icons) change to luminous champagne gold with glowing aura in Dark Mode */
+body.theme-dark .btn-secondary:hover *,
+body.theme-dark .hero-secondary-cta:hover *,
+body.theme-dark .btn-outline-dark:hover *,
+body.theme-dark .btn-outline-gold:hover *,
+body.theme-dark .h2-hero-btn-secondary:hover *,
+body.theme-dark .h2-premium-explore-btn:hover *,
+body.theme-dark .abt-hero-btn-secondary:hover *,
+body.theme-dark .srv-hero-btn-secondary:hover *,
+body.theme-dark .srvd-hero-btn-secondary:hover *,
+body.theme-dark .srvd-cta-secondary-btn:hover *,
+body.theme-dark .blg-hero-btn-secondary:hover *,
+body.theme-dark .blgd-cta-secondary-btn:hover *,
+body.theme-dark .cnt-hero-btn-secondary:hover *,
+body.theme-dark .cnt-map-link:hover *,
+body.theme-dark .cnt-cta-btn-modal:hover *,
+body.theme-dark .cs-btn-secondary:hover *,
+body.theme-dark .error-btn-secondary:hover * {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 0 14px rgba(201, 169, 110, 0.6) !important;
+}
+
+body.theme-dark .btn-secondary:hover i,
+body.theme-dark .hero-secondary-cta:hover i,
+body.theme-dark .btn-outline-dark:hover i,
+body.theme-dark .btn-outline-gold:hover i,
+body.theme-dark .h2-hero-btn-secondary:hover i,
+body.theme-dark .h2-premium-explore-btn:hover i,
+body.theme-dark .abt-hero-btn-secondary:hover i,
+body.theme-dark .srv-hero-btn-secondary:hover i,
+body.theme-dark .srvd-hero-btn-secondary:hover i,
+body.theme-dark .srvd-cta-secondary-btn:hover i,
+body.theme-dark .blg-hero-btn-secondary:hover i,
+body.theme-dark .blgd-cta-secondary-btn:hover i,
+body.theme-dark .cnt-hero-btn-secondary:hover i,
+body.theme-dark .cnt-map-link:hover i,
+body.theme-dark .cnt-cta-btn-modal:hover i,
+body.theme-dark .cs-btn-secondary:hover i,
+body.theme-dark .error-btn-secondary:hover i {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.65)) !important;
+}
+
+/* Calendar icon visibility in normal state across dark mode */
+body.theme-dark .srv-hero-btn-secondary .fa-calendar-check,
+body.theme-dark .srv-hero-btn-secondary i.fa-calendar-check,
+body.theme-dark .srv-hero-btn-secondary i:first-child,
+body.theme-dark .abt-hero-btn-secondary .fa-calendar-check,
+body.theme-dark .abt-hero-btn-secondary i.fa-calendar-check,
+body.theme-dark .abt-hero-btn-secondary i:first-child,
+body.theme-dark .srvd-hero-btn-secondary .fa-calendar-check,
+body.theme-dark .srvd-hero-btn-secondary i.fa-calendar-check,
+body.theme-dark .srvd-hero-btn-secondary i:first-child,
+body.theme-dark .cnt-cta-btn-modal .fa-calendar-check,
+body.theme-dark .cnt-cta-btn-modal i.fa-calendar-check,
+body.theme-dark .cnt-cta-btn-modal i:first-child {
+  color: #DFBE85 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: drop-shadow(0 0 6px rgba(201, 169, 110, 0.45));
+}
+
+@keyframes glassBlinkAmbient {
+  0%, 75% {
+    left: -160%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.75;
+  }
+  90% {
+    left: 200%;
+    opacity: 0.75;
+  }
+  92%, 100% {
+    left: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes glassBlinkSweep {
+  0% {
+    left: -160%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 200%;
+    opacity: 0;
+  }
 }
 
 .site-header {
@@ -769,51 +1192,139 @@ body.theme-dark .heading-line-1 {
 .hero-cta-group {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .hero-primary-cta {
+  height: 48px;
+  min-height: 48px;
   padding: 12px 26px;
-  border-radius: 8px;
-}
-
-.hero-secondary-cta {
-  padding: 12px 24px;
   font-family: var(--font-heading);
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border: 1.5px solid var(--color-primary-deep);
-  color: var(--color-primary-deep);
-  background: transparent;
-  transition: all var(--transition-normal);
+  box-sizing: border-box;
   white-space: nowrap;
 }
 
-.hero-secondary-cta:hover {
-  background-color: var(--color-primary-deep);
-  color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(16, 42, 45, 0.2);
+.hero-secondary-cta {
+  height: 48px;
+  min-height: 48px;
+  padding: 12px 26px;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1.5px solid rgba(16, 42, 45, 0.28) !important;
+  color: #102A2D !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(16, 42, 45, 0.06);
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
+.hero-secondary-cta > * {
+  position: relative;
+  z-index: 3;
+  color: #102A2D !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: color 0.3s ease;
+}
+
+.hero-secondary-cta span {
+  color: #102A2D !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  line-height: 1;
+}
+
+.hero-secondary-cta .fa-arrow-right {
+  color: #102A2D !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-size: 0.88rem;
+  transition: transform var(--transition-fast), color 0.3s ease;
+}
+
+/* Light Mode Glass Hover: Border and content change color to rich gold */
+.hero-secondary-cta:hover {
+  background: rgba(201, 169, 110, 0.16) !important;
+  background-color: rgba(201, 169, 110, 0.16) !important;
+  border-color: #A67C1E !important;
+  color: #9E6F18 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+}
+
+.hero-secondary-cta:hover *,
+.hero-secondary-cta:hover span {
+  color: #9E6F18 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: none !important;
+}
+
+.hero-secondary-cta:hover .fa-arrow-right {
+  color: #9E6F18 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(4px);
+  filter: none !important;
+}
+
+/* Dark Mode resting & hover */
 body.theme-dark .hero-secondary-cta {
-  border-color: rgba(255, 255, 255, 0.35);
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  box-shadow: none;
+}
+
+body.theme-dark .hero-secondary-cta > *,
+body.theme-dark .hero-secondary-cta span,
+body.theme-dark .hero-secondary-cta .fa-arrow-right {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 body.theme-dark .hero-secondary-cta:hover {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
-  color: #102A2D;
-  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.3);
+  background: rgba(201, 169, 110, 0.14) !important;
+  background-color: rgba(201, 169, 110, 0.14) !important;
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
+  box-shadow: 0 0 25px rgba(201, 169, 110, 0.55), inset 0 0 14px rgba(201, 169, 110, 0.2) !important;
+}
+
+body.theme-dark .hero-secondary-cta:hover *,
+body.theme-dark .hero-secondary-cta:hover span {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 0 14px rgba(201, 169, 110, 0.6) !important;
+}
+
+body.theme-dark .hero-secondary-cta:hover .fa-arrow-right {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(4px);
+  filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.65)) !important;
 }
 
 .hero-media-col {
@@ -2690,6 +3201,41 @@ body.theme-dark .filter-count {
 body.theme-dark .testimonial-card.featured-testimonial {
   background: linear-gradient(180deg, var(--bg-surface) 0%, rgba(8, 126, 139, 0.12) 100%);
 }
+
+.testimonial-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.testimonial-card-header .quote-icon {
+  margin-bottom: 0;
+}
+
+.testimonial-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-gold);
+  font-size: 0.88rem;
+}
+
+.testimonial-stars i {
+  color: var(--color-gold);
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.testimonial-card:hover .testimonial-stars i {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 5px rgba(201, 169, 110, 0.45));
+}
+
+.testimonial-card:hover .testimonial-stars i:nth-child(1) { transition-delay: 0.02s; }
+.testimonial-card:hover .testimonial-stars i:nth-child(2) { transition-delay: 0.05s; }
+.testimonial-card:hover .testimonial-stars i:nth-child(3) { transition-delay: 0.08s; }
+.testimonial-card:hover .testimonial-stars i:nth-child(4) { transition-delay: 0.11s; }
+.testimonial-card:hover .testimonial-stars i:nth-child(5) { transition-delay: 0.14s; }
 
 .quote-icon {
   font-size: 1.6rem;

@@ -1,4 +1,4 @@
-﻿
+
 
 .about-body {
   overflow-x: clip;
@@ -250,11 +250,14 @@ body.theme-dark .abt-hero-description {
 }
 
 .abt-hero-btn-secondary:hover {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
-  color: #102A2D;
+  background: rgba(201, 169, 110, 0.15) !important;
+  background-color: rgba(201, 169, 110, 0.15) !important;
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.3);
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
 }
 
 .abt-hero-btn-primary .fa-arrow-right,
@@ -268,29 +271,75 @@ body.theme-dark .abt-hero-description {
   transform: translateX(4px);
 }
 
-.abt-hero-btn-secondary .fa-calendar-check {
-  font-size: 0.88rem;
-  color: #A68038;
+.abt-hero-btn-secondary > * {
+  position: relative;
+  z-index: 3;
+}
+
+.abt-hero-btn-secondary .fa-calendar-check,
+.abt-hero-btn-secondary i.fa-calendar-check,
+.abt-hero-btn-secondary i:first-child {
+  font-size: 0.95rem;
+  color: #C9A96E !important;
+  opacity: 1 !important;
   transition: color var(--transition-normal);
 }
 
-.abt-hero-btn-secondary:hover .fa-calendar-check {
-  color: #102A2D;
+.abt-hero-btn-secondary:hover * {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 0 12px rgba(201, 169, 110, 0.5);
+}
+
+.abt-hero-btn-secondary:hover i {
+  color: var(--color-gold, #DFBE85) !important;
+  filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.65)) !important;
 }
 
 body.theme-dark .abt-hero-btn-secondary {
   border: 1.5px solid rgba(255, 255, 255, 0.35);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background: rgba(255, 255, 255, 0.04);
   box-shadow: none;
 }
 
-body.theme-dark .abt-hero-btn-secondary .fa-calendar-check {
-  color: var(--color-gold);
+body.theme-dark .abt-hero-btn-secondary span {
+  color: #FFFFFF !important;
 }
 
-body.theme-dark .abt-hero-btn-secondary:hover .fa-calendar-check {
-  color: #102A2D;
+body.theme-dark .abt-hero-btn-secondary .fa-arrow-right {
+  color: #FFFFFF !important;
+}
+
+body.theme-dark .abt-hero-btn-secondary .fa-calendar-check,
+body.theme-dark .abt-hero-btn-secondary i.fa-calendar-check,
+body.theme-dark .abt-hero-btn-secondary i:first-child {
+  color: #DFBE85 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: drop-shadow(0 0 6px rgba(201, 169, 110, 0.45));
+}
+
+body.theme-dark .abt-hero-btn-secondary:hover {
+  background: rgba(201, 169, 110, 0.12) !important;
+  background-color: rgba(201, 169, 110, 0.12) !important;
+  border-color: var(--color-gold, #DFBE85) !important;
+  color: var(--color-gold, #DFBE85) !important;
+  box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
+  transform: translateY(-2px);
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+body.theme-dark .abt-hero-btn-secondary:hover *,
+body.theme-dark .abt-hero-btn-secondary:hover span,
+body.theme-dark .abt-hero-btn-secondary:hover i {
+  color: var(--color-gold, #DFBE85) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 0 12px rgba(201, 169, 110, 0.5);
+  filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.65)) !important;
 }
 
 .abt-hero-metrics-ribbon {
