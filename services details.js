@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
@@ -315,7 +314,7 @@ const SERVICES_DATA = {
   };
 
 const dom = {
-    
+
     switcherButtons: document.querySelectorAll('.srvd-switcher-btn'),
     breadcrumbCurrent: document.getElementById('breadcrumbServiceTitle'),
 

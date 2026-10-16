@@ -1,0 +1,1054 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Customisation Enquiry | AUREON CUSTOMS Atelier</title>
+  <meta name="description"
+    content="Configure and reserve your bespoke automotive transformation with Aureon Customs. Luxury vinyl wraps, stealth PPF paint protection, custom liveries, and performance body modifications.">
+  <meta name="keywords"
+    content="vehicle customisation, car wrap inquiry, bespoke vinyl wrap, luxury automotive atelier, PPF enquiry, car styling">
+
+  <link rel="icon" type="image/png" href="assets/images/aureon-logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="index.css">
+
+  <link rel="stylesheet" href="customise.css">
+</head>
+
+<body class="theme-light">
+
+  <header class="customise-utility-bar" id="utilityBar">
+    <div class="utility-bar-inner">
+
+      <a href="index.html" class="utility-brand" id="utilityBrandLink" aria-label="Aureon Customs Home">
+        <img src="assets/images/aureon-logo.png" alt="Aureon Customs Shield Logo" class="utility-logo-img">
+        <div class="utility-brand-text">
+          <span class="utility-brand-name">AUREON</span>
+          <span class="utility-brand-tagline">CUSTOMS</span>
+        </div>
+      </a>
+
+      <div class="header-actions utility-actions">
+
+        <a href="index.html" class="utility-return-link" id="utilityReturnLink" title="Return to Showroom">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Showroom</span>
+        </a>
+
+        <button class="action-btn theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon icon-moon"></i>
+          <i class="fa-solid fa-sun icon-sun"></i>
+        </button>
+
+        <button class="action-btn rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle right-to-left layout"
+          title="Toggle RTL/LTR">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main class="customise-page-main" id="mainContent">
+
+    <div class="customise-card" id="customiseCard">
+
+      <div class="card-header">
+        <div class="card-eyebrow">
+          <i class="fa-solid fa-sliders"></i>
+          <span>VEHICLE CUSTOMISATION</span>
+        </div>
+        <h1 class="card-title">Create Your Signature Look</h1>
+        <p class="card-subtitle">Tell us about your vehicle and the transformation you have in mind. Our master livery
+          directors curate every bespoke project to surgical standards.</p>
+      </div>
+
+      <div class="progress-tracker" aria-label="Enquiry Progress">
+        <div class="progress-line-track">
+          <div class="progress-line-fill" id="progressLineFill"></div>
+        </div>
+        <ol class="progress-steps-list">
+          <li class="progress-step-item active" id="stepVehicle">
+            <span class="step-circle">1</span>
+            <span class="step-label">Vehicle</span>
+          </li>
+
+          <li class="progress-step-item" id="stepStyle">
+            <span class="step-circle">2</span>
+            <span class="step-label">Style</span>
+          </li>
+
+          <li class="progress-step-item" id="stepDetails">
+            <span class="step-circle">3</span>
+            <span class="step-label">Details</span>
+          </li>
+        </ol>
+      </div>
+
+      <form id="customiseEnquiryForm" novalidate>
+
+        <section class="form-section" id="sectionVehicle">
+          <div class="section-head">
+            <div class="section-title-wrap">
+              <span class="section-num-pill">01</span>
+              <h2 class="section-title">
+                <i class="fa-solid fa-car-side" style="color: var(--color-teal);"></i>
+                <span>Vehicle Details</span>
+              </h2>
+            </div>
+            <span class="section-badge">Required</span>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label class="field-label">
+              <span>Vehicle Classification</span>
+              <span class="field-required">*</span>
+            </label>
+            <div class="category-chips-grid" role="radiogroup" aria-label="Vehicle Category">
+
+              <label class="category-chip-label">
+                <input type="radio" name="vehicleCategory" value="car" class="category-chip-input" checked>
+                <div class="category-chip-card">
+                  <i class="fa-solid fa-car"></i>
+                  <span>Car / Sedan</span>
+                </div>
+              </label>
+
+              <label class="category-chip-label">
+                <input type="radio" name="vehicleCategory" value="suv" class="category-chip-input">
+                <div class="category-chip-card">
+                  <i class="fa-solid fa-truck-monster"></i>
+                  <span>SUV / Crossover</span>
+                </div>
+              </label>
+
+              <label class="category-chip-label">
+                <input type="radio" name="vehicleCategory" value="supercar" class="category-chip-input">
+                <div class="category-chip-card">
+                  <i class="fa-solid fa-gauge-high"></i>
+                  <span>Luxury / Supercar</span>
+                </div>
+              </label>
+
+              <label class="category-chip-label">
+                <input type="radio" name="vehicleCategory" value="pickup" class="category-chip-input">
+                <div class="category-chip-card">
+                  <i class="fa-solid fa-truck-pickup"></i>
+                  <span>Pickup Truck</span>
+                </div>
+              </label>
+
+              <label class="category-chip-label">
+                <input type="radio" name="vehicleCategory" value="motorcycle" class="category-chip-input">
+                <div class="category-chip-card">
+                  <i class="fa-solid fa-motorcycle"></i>
+                  <span>Motorcycle / Bike</span>
+                </div>
+              </label>
+
+              <label class="category-chip-label">
+                <input type="radio" name="vehicleCategory" value="van" class="category-chip-input">
+                <div class="category-chip-card">
+                  <i class="fa-solid fa-van-shuttle"></i>
+                  <span>Van / Commercial</span>
+                </div>
+              </label>
+
+              <label class="category-chip-label">
+                <input type="radio" name="vehicleCategory" value="classic" class="category-chip-input">
+                <div class="category-chip-card">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>Vintage Classic</span>
+                </div>
+              </label>
+
+              <label class="category-chip-label">
+                <input type="radio" name="vehicleCategory" value="other" class="category-chip-input">
+                <div class="category-chip-card">
+                  <i class="fa-solid fa-circle-question"></i>
+                  <span>Other Category</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <div class="conditional-container form-group" id="customCategoryBox" style="margin-bottom: 20px;">
+            <label class="field-label" for="customCategoryInput">
+              <span>Specify Custom Vehicle Classification</span>
+              <span class="field-required">*</span>
+            </label>
+            <input type="text" id="customCategoryInput" class="form-input"
+              placeholder="e.g. Bespoke Track Cart, GT Racecar, Hypercar">
+            <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please specify your vehicle classification.</span>
+          </div>
+
+          <div class="form-grid-3">
+
+            <div class="form-group">
+              <label class="field-label" for="vehicleMake">
+                <span>Vehicle Make</span>
+                <span class="field-required">*</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="vehicleMake" class="form-select" required aria-required="true">
+                  <option value="" disabled selected>Select Make</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+              <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please select vehicle manufacturer.</span>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="vehicleModel">
+                <span>Vehicle Model</span>
+                <span class="field-required">*</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="vehicleModel" class="form-select" disabled required aria-required="true">
+                  <option value="" disabled selected>Select Make First</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+              <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please select specific vehicle model.</span>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="vehicleYear">
+                <span>Manufacturing Year</span>
+                <span class="field-required">*</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="vehicleYear" class="form-select" required aria-required="true">
+                  <option value="" disabled selected>Select Year</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+              <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please select manufacturing year.</span>
+            </div>
+
+          </div>
+
+          <div class="form-grid-2" style="margin-top: 16px;">
+
+            <div class="conditional-container form-group" id="customMakeBox">
+              <label class="field-label" for="customMakeInput">
+                <span>Custom Manufacturer Name</span>
+                <span class="field-required">*</span>
+              </label>
+              <input type="text" id="customMakeInput" class="form-input"
+                placeholder="e.g. Koenigsegg, Pagani, Lotus, Custom Chassis">
+              <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please specify manufacturer.</span>
+            </div>
+
+            <div class="conditional-container form-group" id="customModelBox">
+              <label class="field-label" for="customModelInput">
+                <span>Custom Model / Trim Specification</span>
+                <span class="field-required">*</span>
+              </label>
+              <input type="text" id="customModelInput" class="form-input"
+                placeholder="e.g. Jesko Attack, Huayra Roadster, Bespoke Spec">
+              <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please specify model.</span>
+            </div>
+
+          </div>
+
+          <div class="form-grid-2" style="margin-top: 20px;">
+
+            <div class="form-group">
+              <label class="field-label" for="currentVehicleColor">
+                <span>Current Vehicle Finish & Colour</span>
+                <span class="field-optional">(Optional)</span>
+              </label>
+              <div class="input-wrapper has-adornment">
+                <i class="fa-solid fa-paint-roller input-icon-adornment"></i>
+                <input type="text" id="currentVehicleColor" class="form-input"
+                  placeholder="e.g. OEM Metallic Agate Grey, Factory Gloss Black">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="vehicleRegistration">
+                <span>Vehicle Registration / Plate Number</span>
+                <span class="field-optional">(Optional)</span>
+              </label>
+              <div class="input-wrapper has-adornment">
+                <i class="fa-solid fa-id-card input-icon-adornment"></i>
+                <input type="text" id="vehicleRegistration" class="form-input"
+                  placeholder="e.g. VIP 777 or Chassis Code">
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="form-section" id="sectionServices">
+          <div class="section-head">
+            <div class="section-title-wrap">
+              <span class="section-num-pill">02</span>
+              <h2 class="section-title">
+                <i class="fa-solid fa-spray-can-sparkles" style="color: var(--color-gold);"></i>
+                <span>Customisation Services</span>
+              </h2>
+            </div>
+            <span class="section-hint">Select one or multiple services</span>
+          </div>
+
+          <div class="services-cards-grid" role="group" aria-label="Customisation Services">
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="full_wrap" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Full Vehicle Wrap</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Complete bumper-to-bumper color change or digital vector print transformation.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="partial_wrap" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-cubes-stacked"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Partial Vehicle Wrap</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Bespoke roof, hood, mirror caps, race stripes, or two-tone visual accents.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="matte_satin" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Matte / Satin Finish</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Stealth, silk-touch non-reflective sheen with anti-glare aesthetic profile.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="gloss_metallic" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Gloss / Metallic Finish</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Deep mirror reflection, liquid crystal luster, and high-density metallic flake.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="colour_change" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Colour Change</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Transform stock factory paint into rare OEM PTS or bespoke custom hue.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="ppf_protection" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>PPF Paint Protection</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Self-healing 8-10mil aliphatic polyurethane stone-chip and UV shield.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="chrome_delete" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-eye-slash"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Chrome Delete</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Shadowline blackout on window trims, front grilles, emblems, and exhaust tips.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="body_kit" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-wrench"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Body Kit Installation</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Carbon splitters, side skirts, rear diffusers, swan-neck wings, and widebody.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="exterior_mods" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-car-burst"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Exterior Modification</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Vented carbon hoods, bespoke aerodynamic canards, mirror upgrades, louvers.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="interior_custom" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-couch"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Interior Customisation</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Forged carbon fiber trims, Italian Alcantara reupholstery, starlight headliners.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="alloy_wheels" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-compact-disc"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Alloy Wheels & Styling</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Electrostatic powder-coating, Brembo caliper paint, wheel spacers, center-locks.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="lighting_mods" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Lighting Modification</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Smoke lens tinting, dynamic DRL sequential modules, underbody studio LEDs.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="detailing" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-soap"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Detailing & Correction</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">Surgical multi-stage swirl removal, isopropyl prep, and 9H ceramic glass coating.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="service-card-label">
+              <input type="checkbox" name="services" value="custom_build" class="service-card-input">
+              <div class="service-card">
+                <div class="service-card-icon-wrap">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="service-card-content">
+                  <div class="service-card-title">
+                    <span>Custom Build / Other</span>
+                    <span class="service-check-indicator"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <p class="service-card-desc">One-off SEMA show build, historic livery recreation, or comprehensive project.</p>
+                </div>
+              </div>
+            </label>
+
+          </div>
+
+          <div class="field-error-message" id="servicesErrorMessage" style="margin-bottom: 16px;">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Please select at least one customisation service.</span>
+          </div>
+
+          <div class="conditional-container service-contextual-box" id="partialWrapContextBox">
+            <h4 class="contextual-title"><i class="fa-solid fa-scissors"></i> Targeted Panels for Partial Wrap:</h4>
+            <div class="checkbox-tag-group">
+              <label class="tag-checkbox-label">
+                <input type="checkbox" name="partialPanels" value="hood" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Front Hood</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="checkbox" name="partialPanels" value="roof" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Roof Panel</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="checkbox" name="partialPanels" value="mirrors" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Side Mirrors</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="checkbox" name="partialPanels" value="spoiler" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Rear Wing / Spoiler</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="checkbox" name="partialPanels" value="trunk" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Trunk / Tailgate</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="checkbox" name="partialPanels" value="stripes" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Bespoke Livery Racing Stripes</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="conditional-container service-contextual-box" id="ppfContextBox">
+            <h4 class="contextual-title"><i class="fa-solid fa-shield"></i> Desired Paint Protection Scope:</h4>
+            <div class="checkbox-tag-group">
+              <label class="tag-checkbox-label">
+                <input type="radio" name="ppfScope" value="full_front" class="tag-checkbox-input" checked>
+                <span class="tag-checkbox-text">Track Pack / Full Front (Bumper, Hood, Fenders, Mirrors)</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="radio" name="ppfScope" value="complete_body" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Complete 100% Vehicle Armor</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="radio" name="ppfScope" value="stealth_matte_ppf" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Stealth Satin Conversion PPF</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="conditional-container service-contextual-box" id="chromeDeleteContextBox">
+            <h4 class="contextual-title"><i class="fa-solid fa-brush"></i> Chrome Delete Sheen Preference:</h4>
+            <div class="checkbox-tag-group">
+              <label class="tag-checkbox-label">
+                <input type="radio" name="chromeSheen" value="gloss_black" class="tag-checkbox-input" checked>
+                <span class="tag-checkbox-text">Deep Gloss Shadowline Black</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="radio" name="chromeSheen" value="satin_black" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Satin Stealth Black</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="radio" name="chromeSheen" value="carbon_fiber" class="tag-checkbox-input">
+                <span class="tag-checkbox-text">Dry Carbon Fiber Vinyl</span>
+              </label>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="form-section" id="sectionStyle">
+          <div class="section-head">
+            <div class="section-title-wrap">
+              <span class="section-num-pill">03</span>
+              <h2 class="section-title">
+                <i class="fa-solid fa-wand-magic" style="color: var(--color-teal);"></i>
+                <span>Style &amp; Aesthetics</span>
+              </h2>
+            </div>
+            <span class="section-hint">Define your visual profile</span>
+          </div>
+
+          <div class="form-grid-3">
+
+            <div class="form-group">
+              <label class="field-label" for="preferredFinish">
+                <span>Preferred Finish</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="preferredFinish" class="form-select">
+                  <option value="" selected>Not Sure / Atelier Consultation</option>
+                  <option value="satin">Satin Sheen (Semi-matte luster)</option>
+                  <option value="matte">Matte (Zero-glare stealth)</option>
+                  <option value="gloss">High Gloss (Mirror reflective)</option>
+                  <option value="metallic">Metallic Flake (High dynamic range)</option>
+                  <option value="chrome">Mirror Chrome / Liquid Silver</option>
+                  <option value="carbon_fibre">Carbon Fibre Weave (2x2 Twill / Forged)</option>
+                  <option value="iridescent">Chameleon / Iridescent Shift</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="preferredColor">
+                <span>Preferred Target Colour</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="preferredColor" class="form-select">
+                  <option value="" selected>Not Sure / Exploring Options</option>
+                  <option value="deep_petrol_teal">Deep Petrol Teal (Aureon Signature PTS)</option>
+                  <option value="champagne_gold">Champagne Gold (Liquid Silk Satin)</option>
+                  <option value="pure_white">Pure Arctic White (High-Gloss / Pearl)</option>
+                  <option value="platinum_grey">Platinum Grey (Battleship Chalk / Nardo)</option>
+                  <option value="steel_grey">Steel Grey (Liquid Titanium / Gunmetal)</option>
+                  <option value="stealth_black">Stealth Obsidian Black (Satin / Matte)</option>
+                  <option value="custom">Custom Colour / OEM PTS Code...</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="designStyle">
+                <span>Design Theme</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="designStyle" class="form-select">
+                  <option value="" selected>Atelier Direction Recommendation</option>
+                  <option value="stealth">Stealth / Murdered-Out</option>
+                  <option value="sport">Sport / Track Day Edition</option>
+                  <option value="luxury">Luxury / VIP Elegance</option>
+                  <option value="racing">Racing Heritage Livery</option>
+                  <option value="minimal">Minimalist Clean Monochrome</option>
+                  <option value="bold">Bold Graphic / High Contrast</option>
+                  <option value="custom">Bespoke 1-of-1 Commission</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="conditional-container" id="customColorBox" style="margin-top: 16px;">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="field-label" for="customColorNameInput">
+                  <span>Specific Color Name or Paint Code</span>
+                </label>
+                <input type="text" id="customColorNameInput" class="form-input"
+                  placeholder="e.g. Porsche PTS Brewster Green, BMW Isle of Man Green">
+              </div>
+
+              <div class="form-group">
+                <label class="field-label" for="customColorPicker">
+                  <span>Approximate Visual Swatch &amp; Hex</span>
+                </label>
+                <div class="color-picker-combo">
+                  <input type="color" id="customColorPicker" value="#087E8B" class="custom-color-chip-input">
+                  <input type="text" id="customColorHexInput" class="form-input custom-color-hex-input" value="#087E8B" maxlength="7">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-grid-3" style="margin-top: 20px;">
+
+            <div class="form-group">
+              <label class="field-label" for="coverageScope">
+                <span>Coverage Scope</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="coverageScope" class="form-select">
+                  <option value="full_vehicle" selected>Full Vehicle (Door Jambs Optional)</option>
+                  <option value="full_with_jambs">Full Vehicle + Complete Door Jambs & Sills</option>
+                  <option value="partial_panels">Specific Exterior Panels Only</option>
+                  <option value="interior_accents">Interior Trim & Cockpit Accents</option>
+                  <option value="not_sure">Not Sure / Advise Best Approach</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="budgetRange">
+                <span>Budget Expectation</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="budgetRange" class="form-select">
+                  <option value="not_sure" selected>Flexible / Discuss with Atelier</option>
+                  <option value="under_2500">$1,500 – $2,500 (Accents / Minor Styling)</option>
+                  <option value="2500_5000">$2,500 – $5,000 (Standard Full Wrap)</option>
+                  <option value="5000_10000">$5,000 – $10,000 (Premium Wrap + PPF / Mods)</option>
+                  <option value="10000_plus">$10,000+ (Full Armor + Carbon + Complete Atelier)</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="preferredTimeframe">
+                <span>Target Completion Timeframe</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="preferredTimeframe" class="form-select">
+                  <option value="asap" selected>As Soon As Possible (Priority Bay)</option>
+                  <option value="within_2_weeks">Within 2 Weeks</option>
+                  <option value="within_month">Within Next Month</option>
+                  <option value="flexible">Flexible / Planning in Advance</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-group" style="margin-top: 20px;">
+            <label class="field-label" for="additionalStylingNotes">
+              <span>Additional Styling & Livery Preferences</span>
+              <span class="field-optional">(Optional)</span>
+            </label>
+            <textarea id="additionalStylingNotes" class="form-textarea" rows="2"
+              placeholder="e.g. Inquire about matching brake caliper paint, satin black roof accent, dry carbon fiber mirror wrap..."></textarea>
+          </div>
+
+        </section>
+
+        <section class="form-section" id="sectionProject">
+          <div class="section-head">
+            <div class="section-title-wrap">
+              <span class="section-num-pill">04</span>
+              <h2 class="section-title">
+                <i class="fa-solid fa-clipboard-list" style="color: var(--color-gold);"></i>
+                <span>Project Scope &amp; Reference</span>
+              </h2>
+            </div>
+            <span class="section-badge">Required</span>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="projectDescription">
+              <span>Project Overview & Goals</span>
+              <span class="field-required">*</span>
+            </label>
+            <textarea id="projectDescription" class="form-textarea" rows="4" required aria-required="true"
+              placeholder="Describe your vision for this vehicle. Mention any current paint condition, previous wraps, specific body parts, or race event deadlines."></textarea>
+            <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please provide a brief project overview.</span>
+          </div>
+
+          <div class="form-group" style="margin-top: 20px;">
+            <label class="field-label">
+              <span>Reference Images / Inspiration Moodboard</span>
+              <span class="field-optional">(Optional — Max 15MB each)</span>
+            </label>
+
+            <div class="upload-dropzone" id="uploadDropzone">
+              <input type="file" id="referenceImageInput" class="upload-dropzone-input" multiple
+                accept="image/jpeg,image/png,image/webp,image/heic">
+              <div class="dropzone-icon">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+              </div>
+              <p class="dropzone-text-primary">Drag & drop vehicle photos or click to browse</p>
+              <p class="dropzone-text-secondary">Supported: JPG, PNG, WEBP, HEIC • High-resolution reference shots</p>
+            </div>
+
+            <div class="upload-preview-grid" id="uploadPreviewGrid"></div>
+
+            <div class="upload-disclaimer">
+              <i class="fa-solid fa-shield-halved" style="color: var(--color-gold);"></i>
+              <span>Reference imagery is securely handled client-side and dispatched directly with your studio consultation ticket.</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2" style="margin-top: 20px;">
+
+            <div class="form-group">
+              <label class="field-label" for="appointmentDate">
+                <span>Preferred Inspection / Consultation Date</span>
+                <span class="field-optional">(Optional)</span>
+              </label>
+              <div class="input-wrapper has-adornment">
+                <i class="fa-solid fa-calendar-day input-icon-adornment"></i>
+                <input type="date" id="appointmentDate" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="additionalNotes">
+                <span>Logistical Notes (Transport / Enclosed Carrier)</span>
+                <span class="field-optional">(Optional)</span>
+              </label>
+              <div class="input-wrapper has-adornment">
+                <i class="fa-solid fa-trailer input-icon-adornment"></i>
+                <input type="text" id="additionalNotes" class="form-input"
+                  placeholder="e.g. Enclosed transport required from airport, vehicle currently stored in cleanroom">
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="form-section" id="sectionContact">
+          <div class="section-head">
+            <div class="section-title-wrap">
+              <span class="section-num-pill">05</span>
+              <h2 class="section-title">
+                <i class="fa-solid fa-user-shield" style="color: var(--color-teal);"></i>
+                <span>Customer Contact</span>
+              </h2>
+            </div>
+            <span class="section-badge">Required</span>
+          </div>
+
+          <div class="form-grid-2">
+
+            <div class="form-group">
+              <label class="field-label" for="clientFullName">
+                <span>Full Name</span>
+                <span class="field-required">*</span>
+              </label>
+              <div class="input-wrapper has-adornment">
+                <i class="fa-solid fa-user input-icon-adornment"></i>
+                <input type="text" id="clientFullName" class="form-input" placeholder="e.g. Marcus Sterling"
+                  required autocomplete="name" aria-required="true">
+              </div>
+              <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please enter your full name.</span>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="clientPhone">
+                <span>Phone Number</span>
+                <span class="field-required">*</span>
+              </label>
+              <div class="phone-input-combo">
+                <div class="select-wrapper country-code-select">
+                  <select id="countryCodeSelect" class="form-select" aria-label="Country Code">
+                    <option value="+1" selected>🇺🇸 +1 (US/CA)</option>
+                    <option value="+44">🇬🇧 +44 (UK)</option>
+                    <option value="+971">🇦🇪 +971 (UAE)</option>
+                    <option value="+49">🇩🇪 +49 (DE)</option>
+                    <option value="+33">🇫🇷 +33 (FR)</option>
+                    <option value="+41">🇨🇭 +41 (CH)</option>
+                    <option value="+61">🇦🇺 +61 (AU)</option>
+                    <option value="+91">🇮🇳 +91 (IN)</option>
+                    <option value="+65">🇸🇬 +65 (SG)</option>
+                    <option value="+81">🇯🇵 +81 (JP)</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-arrow"></i>
+                </div>
+                <div class="input-wrapper has-adornment" style="flex: 1;">
+                  <i class="fa-solid fa-phone input-icon-adornment"></i>
+                  <input type="tel" id="clientPhone" class="form-input" placeholder="(555) 000-0000"
+                    required autocomplete="tel" aria-required="true">
+                </div>
+              </div>
+              <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid phone number.</span>
+            </div>
+
+          </div>
+
+          <div class="form-grid-2" style="margin-top: 20px;">
+
+            <div class="form-group">
+              <label class="field-label" for="clientEmail">
+                <span>Email Address</span>
+                <span class="field-optional">(Recommended for digital mockups)</span>
+              </label>
+              <div class="input-wrapper has-adornment">
+                <i class="fa-solid fa-envelope input-icon-adornment"></i>
+                <input type="email" id="clientEmail" class="form-input" placeholder="client@aureoncustoms.com"
+                  autocomplete="email">
+              </div>
+              <span class="field-error-message"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email format.</span>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="clientLocation">
+                <span>City / Atelier Service Region</span>
+                <span class="field-optional">(Optional)</span>
+              </label>
+              <div class="input-wrapper has-adornment">
+                <i class="fa-solid fa-location-dot input-icon-adornment"></i>
+                <input type="text" id="clientLocation" class="form-input" placeholder="e.g. Los Angeles, London, Dubai">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-group" style="margin-top: 20px;">
+            <label class="field-label">
+              <span>Preferred Contact Method</span>
+            </label>
+            <div class="checkbox-tag-group" role="radiogroup" aria-label="Preferred Contact Channel">
+              <label class="tag-checkbox-label">
+                <input type="radio" name="contactMethod" value="whatsapp" class="tag-checkbox-input" checked>
+                <span class="tag-checkbox-text"><i class="fa-brands fa-whatsapp" style="color: #25D366; margin-inline-end: 6px;"></i>WhatsApp Concierge</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="radio" name="contactMethod" value="phone" class="tag-checkbox-input">
+                <span class="tag-checkbox-text"><i class="fa-solid fa-phone" style="margin-inline-end: 6px;"></i>Direct Phone Call</span>
+              </label>
+              <label class="tag-checkbox-label">
+                <input type="radio" name="contactMethod" value="email" class="tag-checkbox-input">
+                <span class="tag-checkbox-text"><i class="fa-solid fa-envelope" style="margin-inline-end: 6px;"></i>Official Email Dossier</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="consent-checkbox-wrap" style="margin-top: 24px;">
+            <input type="checkbox" id="privacyConsentCheckbox" class="custom-checkbox" required aria-required="true">
+            <label for="privacyConsentCheckbox" class="consent-label">
+              I consent to Aureon Customs storing my vehicle specification and contacting me regarding this bespoke modification inquiry under the studio <a href="contact.html" class="consent-link">Privacy Policy</a>.
+            </label>
+          </div>
+          <div class="field-error-message" id="consentErrorMessage">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Consent is required to proceed with studio consultation.</span>
+          </div>
+
+        </section>
+
+        <div class="form-actions-bar">
+
+          <div class="actions-buttons-row">
+            <button type="button" class="btn-secondary-action" id="saveDraftBtn">
+              <i class="fa-solid fa-floppy-disk"></i>
+              <span>Save Draft</span>
+            </button>
+
+            <button type="submit" class="btn-primary-action" id="submitEnquiryBtn">
+              <span>Request Consultation</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="privacy-reassurance">
+            <i class="fa-solid fa-lock"></i>
+            <span>Your vehicle specifications and contact details are handled with strict VIP atelier confidentiality. No spam, ever.</span>
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <div class="confirmation-modal-backdrop" id="confirmationModal" role="dialog" aria-modal="true"
+    aria-labelledby="confTitle">
+    <div class="confirmation-card">
+
+      <div class="conf-icon-wrap">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <div class="conf-badge-pill">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>INQUIRY SPECIFICATION: <strong id="confRefCode">AC-2026-0000</strong></span>
+      </div>
+
+      <h2 class="conf-title" id="confTitle">Specification Recorded</h2>
+      <p class="conf-subtitle">Your customisation enquiry has been validated and compiled by the Aureon Customs studio concierge.</p>
+
+      <div class="conf-summary-grid">
+        <div class="conf-summary-item">
+          <span class="conf-summary-label">Vehicle</span>
+          <span class="conf-summary-val" id="confVehicleVal">—</span>
+        </div>
+        <div class="conf-summary-item">
+          <span class="conf-summary-label">Contact Client</span>
+          <span class="conf-summary-val" id="confContactVal">—</span>
+        </div>
+        <div class="conf-summary-item" style="grid-column: 1 / -1;">
+          <span class="conf-summary-label">Aesthetic & Target Finish</span>
+          <span class="conf-summary-val" id="confFinishVal">—</span>
+        </div>
+        <div class="conf-summary-item" style="grid-column: 1 / -1;">
+          <span class="conf-summary-label">Requested Services</span>
+          <div class="conf-services-tags" id="confServicesList"></div>
+        </div>
+      </div>
+
+      <div class="conf-actions-row">
+        <a href="#" class="btn-whatsapp-dispatch" id="confWhatsAppBtn" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp fa-lg"></i>
+          <span>Dispatch Spec to WhatsApp Concierge</span>
+        </a>
+
+        <div class="conf-secondary-actions">
+          <button type="button" class="conf-action-btn" id="confDownloadSummaryBtn">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Download Spec (.txt)</span>
+          </button>
+          <a href="index.html" class="conf-action-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Return to Showroom</span>
+          </a>
+          <button type="button" class="conf-action-btn" id="confCloseModalBtn">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span>Edit Details</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="customise.js"></script>
+</body>
+
+</html>

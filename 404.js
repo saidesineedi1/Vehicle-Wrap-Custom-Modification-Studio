@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initRtlToggle();
@@ -90,7 +89,7 @@ function render() {
       const transX = currentX * 8;
 
       digitsStage.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateX(${transX.toFixed(2)}px)`;
-      
+
       if (groundShadow) {
         groundShadow.style.transform = `translateX(${(-transX * 0.8).toFixed(2)}px) scale(${1 - Math.abs(currentY) * 0.1})`;
       }

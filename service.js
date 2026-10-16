@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   initServiceFaqAccordion();
   initServiceSmoothScroll();
@@ -75,6 +74,7 @@ function initServiceModalTriggers() {
   const consultBtn = document.getElementById('srvConsultBtn');
   const inspectionBtn = document.getElementById('srvBookInspectionBtn');
   const smallCtaBtn = document.getElementById('srvOpenConsultModalBtn');
+  const customiseBtn = document.getElementById('openCustomiseBtn') || document.getElementById('openLoginBtn');
 
   function openConsultationModal(e) {
     if (e) e.preventDefault();
@@ -87,4 +87,9 @@ function initServiceModalTriggers() {
   if (consultBtn) consultBtn.addEventListener('click', openConsultationModal);
   if (inspectionBtn) inspectionBtn.addEventListener('click', openConsultationModal);
   if (smallCtaBtn) smallCtaBtn.addEventListener('click', openConsultationModal);
+  if (customiseBtn) {
+    customiseBtn.addEventListener('click', () => {
+      window.location.href = 'customise.html';
+    });
+  }
 }

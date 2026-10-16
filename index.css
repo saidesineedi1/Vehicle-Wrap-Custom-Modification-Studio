@@ -1,7 +1,6 @@
-
-
+﻿
 :root {
-  
+
   --color-primary: #087E8B;
   --color-primary-light: #0FA2B2;
   --color-primary-dark: #064C56;
@@ -299,7 +298,6 @@ body.theme-dark .btn-ghost-play:hover {
   visibility: visible !important;
 }
 
-/* Light Mode Glass Hover: Border and content change color to rich gold */
 .btn-outline-gold:hover {
   background: rgba(201, 169, 110, 0.16) !important;
   background-color: rgba(201, 169, 110, 0.16) !important;
@@ -324,7 +322,6 @@ body.theme-dark .btn-ghost-play:hover {
   filter: none !important;
 }
 
-/* Dark Mode resting & hover */
 body.theme-dark .btn-outline-gold {
   border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
   color: #FFFFFF !important;
@@ -351,7 +348,6 @@ body.theme-dark .btn-outline-gold:hover i {
   text-shadow: 0 0 14px rgba(201, 169, 110, 0.6) !important;
 }
 
-/* Dark Section overrides (e.g. CTA banners on dark background) */
 .cta-section .btn-outline-gold {
   border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
   color: #FFFFFF !important;
@@ -408,10 +404,6 @@ body.theme-dark .btn-outline-dark:hover {
   box-shadow: 0 0 22px rgba(201, 169, 110, 0.45), inset 0 0 14px rgba(201, 169, 110, 0.18) !important;
 }
 
-/* ==========================================================================
-   Secondary Buttons — Universal Gold Hover & Glass Blink Effect
-   ========================================================================== */
-
 .btn-secondary,
 .hero-secondary-cta,
 .btn-outline-dark,
@@ -439,7 +431,6 @@ body.theme-dark .btn-outline-dark:hover {
               transform var(--transition-normal) !important;
 }
 
-/* Ensure all content (text, icons, calendar) sits securely above glass ribbon */
 .btn-secondary > *,
 .hero-secondary-cta > *,
 .btn-outline-dark > *,
@@ -461,7 +452,6 @@ body.theme-dark .btn-outline-dark:hover {
   z-index: 3;
 }
 
-/* Glass Blink Highlight Ribbon */
 .btn-secondary::after,
 .hero-secondary-cta::after,
 .btn-outline-dark::after,
@@ -503,7 +493,6 @@ body.theme-dark .btn-outline-dark:hover {
   animation: glassBlinkAmbient 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
-/* Fast dazzling glass blink sweep on hover */
 .btn-secondary:hover::after,
 .hero-secondary-cta:hover::after,
 .btn-outline-dark:hover::after,
@@ -525,8 +514,6 @@ body.theme-dark .btn-outline-dark:hover {
   animation: glassBlinkSweep 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Universal Glass Hover state for all secondary buttons:
-   Border and content only change color, while background remains translucent glass */
 .btn-secondary:hover,
 .hero-secondary-cta:hover,
 .btn-outline-dark:hover,
@@ -554,7 +541,6 @@ body.theme-dark .btn-outline-dark:hover {
   -webkit-backdrop-filter: blur(12px) !important;
 }
 
-/* Theme Dark Glass Hover state override */
 body.theme-dark .btn-secondary:hover,
 body.theme-dark .hero-secondary-cta:hover,
 body.theme-dark .btn-outline-dark:hover,
@@ -581,7 +567,6 @@ body.theme-dark .error-btn-secondary:hover {
   -webkit-backdrop-filter: blur(12px) !important;
 }
 
-/* All nested elements (text and icons) change to high-contrast rich gold on hover in Light Mode */
 .btn-secondary:hover *,
 .hero-secondary-cta:hover *,
 .btn-outline-dark:hover *,
@@ -628,7 +613,6 @@ body.theme-dark .error-btn-secondary:hover {
   filter: none !important;
 }
 
-/* All nested elements (text and icons) change to luminous champagne gold with glowing aura in Dark Mode */
 body.theme-dark .btn-secondary:hover *,
 body.theme-dark .hero-secondary-cta:hover *,
 body.theme-dark .btn-outline-dark:hover *,
@@ -675,7 +659,6 @@ body.theme-dark .error-btn-secondary:hover i {
   filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.65)) !important;
 }
 
-/* Calendar icon visibility in normal state across dark mode */
 body.theme-dark .srv-hero-btn-secondary .fa-calendar-check,
 body.theme-dark .srv-hero-btn-secondary i.fa-calendar-check,
 body.theme-dark .srv-hero-btn-secondary i:first-child,
@@ -730,13 +713,13 @@ body.theme-dark .cnt-cta-btn-modal i:first-child {
 }
 
 .site-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
   height: var(--header-height);
   background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
@@ -1026,7 +1009,14 @@ body.theme-dark .theme-toggle-btn .icon-sun {
 }
 
 .btn.login-btn,
-.login-btn {
+.login-btn,
+.btn.customise-btn,
+.customise-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
   padding: 6px 16px;
   height: 36px;
   min-height: 36px;
@@ -1040,12 +1030,16 @@ body.theme-dark .theme-toggle-btn .icon-sun {
 }
 
 .btn.login-btn i,
-.login-btn i {
+.login-btn i,
+.btn.customise-btn i,
+.customise-btn i {
   display: none !important;
 }
 
 .btn.login-btn:hover,
-.login-btn:hover {
+.login-btn:hover,
+.btn.customise-btn:hover,
+.customise-btn:hover {
   transform: translateY(-1.5px);
   box-shadow: 0 6px 16px rgba(201, 169, 110, 0.35);
 }
@@ -1168,6 +1162,36 @@ body.theme-dark .heading-line-1 {
   -webkit-text-fill-color: transparent;
 }
 
+.h2-hl-row {
+  display: inline-block;
+}
+
+.h2-hl-gold {
+  color: var(--color-gold, #C9A96E);
+  background: linear-gradient(135deg, #DFBE85 0%, #C9A96E 50%, #B38E50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+body.theme-light .h2-hl-gold {
+  color: #B38E50;
+  background: linear-gradient(135deg, #C9A96E 0%, #B38E50 50%, #9E6F18 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-dark .h2-hl-gold {
+  color: #DFBE85;
+  background: linear-gradient(135deg, #DFBE85 0%, #C9A96E 50%, #B38E50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 14px rgba(201, 169, 110, 0.35));
+}
+
 .hero-subline {
   font-family: var(--font-heading);
   font-size: 1.15rem;
@@ -1261,7 +1285,6 @@ body.theme-dark .heading-line-1 {
   transition: transform var(--transition-fast), color 0.3s ease;
 }
 
-/* Light Mode Glass Hover: Border and content change color to rich gold */
 .hero-secondary-cta:hover {
   background: rgba(201, 169, 110, 0.16) !important;
   background-color: rgba(201, 169, 110, 0.16) !important;
@@ -1287,7 +1310,6 @@ body.theme-dark .heading-line-1 {
   filter: none !important;
 }
 
-/* Dark Mode resting & hover */
 body.theme-dark .hero-secondary-cta {
   border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
   color: #FFFFFF !important;
@@ -4700,7 +4722,9 @@ body.theme-dark .timeline-arrow-btn {
   }
 
   .btn.login-btn,
-  .login-btn {
+  .login-btn,
+  .btn.customise-btn,
+  .customise-btn {
     padding: 5px 12px;
     height: 34px;
     min-height: 34px;
@@ -4930,7 +4954,9 @@ body.theme-dark .timeline-arrow-btn {
   }
 
   .btn.login-btn,
-  .login-btn {
+  .login-btn,
+  .btn.customise-btn,
+  .customise-btn {
     padding: 4px 10px;
     height: 32px;
     min-height: 32px;
@@ -5180,7 +5206,9 @@ body.theme-dark .timeline-arrow-btn {
   }
 
   .btn.login-btn,
-  .login-btn {
+  .login-btn,
+  .btn.customise-btn,
+  .customise-btn {
     padding: 3px 8px;
     height: 30px;
     min-height: 30px;

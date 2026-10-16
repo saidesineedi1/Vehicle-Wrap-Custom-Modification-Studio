@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   initContactCommissionForm();
   initContactFaqAccordion();
@@ -128,6 +127,7 @@ function initContactModalTriggers() {
   const consultModal = document.getElementById('consultationModal');
   const openModalBtn = document.getElementById('cntOpenConsultModalBtn');
   const vaultBtn = document.getElementById('cntVaultBookBtn');
+  const customiseBtn = document.getElementById('openCustomiseBtn') || document.getElementById('openLoginBtn');
 
   function openConsultModal(e) {
     if (e) e.preventDefault();
@@ -139,6 +139,11 @@ function initContactModalTriggers() {
 
   if (openModalBtn) openModalBtn.addEventListener('click', openConsultModal);
   if (vaultBtn) vaultBtn.addEventListener('click', openConsultModal);
+  if (customiseBtn) {
+    customiseBtn.addEventListener('click', () => {
+      window.location.href = 'customise.html';
+    });
+  }
 }
 
 function initContactSmoothScroll() {

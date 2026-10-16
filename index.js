@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initRtlToggle();
@@ -307,60 +306,12 @@ if (lightboxConsultBtn) {
 }
 
 function initModals() {
-    
-    const openLoginBtn = document.getElementById('openLoginBtn');
-    const loginModal = document.getElementById('loginModal');
-    const closeLoginModalBtn = document.getElementById('closeLoginModalBtn');
-    const tabSignIn = document.getElementById('tabSignIn');
-    const tabTrackBuild = document.getElementById('tabTrackBuild');
-    const clientLoginForm = document.getElementById('clientLoginForm');
 
-    if (openLoginBtn) {
-      openLoginBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.location.href = 'login.html';
-      });
-    }
+    const openCustomiseBtn = document.getElementById('openCustomiseBtn');
+    if (openCustomiseBtn) {
+      openCustomiseBtn.addEventListener('click', (e) => {
 
-    if (closeLoginModalBtn && loginModal) {
-      closeLoginModalBtn.addEventListener('click', () => {
-        loginModal.setAttribute('hidden', '');
-        document.body.style.overflow = '';
-      });
-    }
-
-    if (loginModal) {
-      loginModal.addEventListener('click', (e) => {
-        if (e.target === loginModal) {
-          loginModal.setAttribute('hidden', '');
-          document.body.style.overflow = '';
-        }
-      });
-    }
-
-if (tabSignIn && tabTrackBuild && clientLoginForm) {
-      tabSignIn.addEventListener('click', () => {
-        tabSignIn.classList.add('active');
-        tabTrackBuild.classList.remove('active');
-        const submitBtn = clientLoginForm.querySelector('.modal-submit-btn span');
-        if (submitBtn) submitBtn.textContent = 'Access Private Portal';
-      });
-
-      tabTrackBuild.addEventListener('click', () => {
-        tabTrackBuild.classList.add('active');
-        tabSignIn.classList.remove('active');
-        const submitBtn = clientLoginForm.querySelector('.modal-submit-btn span');
-        if (submitBtn) submitBtn.textContent = 'Lookup Build Status';
-      });
-    }
-
-    if (clientLoginForm && loginModal) {
-      clientLoginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        loginModal.setAttribute('hidden', '');
-        document.body.style.overflow = '';
-        showToast('Client Portal Authenticated. Loading Build Status...', 'circle-check');
-        clientLoginForm.reset();
+        window.location.href = 'customise.html';
       });
     }
 
@@ -472,7 +423,7 @@ function initMobileNav() {
 
 if (navHomeLink && navHomeItem) {
       navHomeLink.addEventListener('click', (e) => {
-        
+
         e.preventDefault();
         const isOpen = navHomeItem.classList.toggle('dropdown-open');
         navHomeLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');

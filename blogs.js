@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   initBlogCategoryFilter();
   initBlogSearch();
@@ -7,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArticleReaderModal();
   initBlogNewsletter();
   initBlogSmoothScroll();
+  initBlogConsultModal();
 });
 
 function initBlogCategoryFilter() {
@@ -411,4 +411,46 @@ function showBlogToast(message, type = 'info') {
       setTimeout(() => toast.remove(), 300);
     }
   }, 4500);
+}
+
+function initBlogConsultModal() {
+  const consultModal = document.getElementById('consultationModal');
+  const customiseBtn = document.getElementById('openCustomiseBtn') || document.getElementById('openLoginBtn');
+  const closeBtn = document.getElementById('closeConsultModalBtn');
+  const form = document.getElementById('consultationModalForm');
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    if (consultModal) {
+      consultModal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeModal() {
+    if (consultModal) {
+      consultModal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (customiseBtn) {
+    customiseBtn.addEventListener('click', () => {
+      window.location.href = 'customise.html';
+    });
+  }
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (consultModal) {
+    consultModal.addEventListener('click', (e) => {
+      if (e.target === consultModal) closeModal();
+    });
+  }
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      closeModal();
+      showBlogToast('Consultation request submitted successfully!', 'success');
+      form.reset();
+    });
+  }
 }

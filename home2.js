@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   initHome2HeroInteractions();
   initHome2ServiceCardRouting();
@@ -131,6 +130,7 @@ lightboxModal.addEventListener('click', (e) => {
 function initHome2CtaHandlers() {
   const startProjectBtn = document.getElementById('h2StartProjectBtn');
   const premiumConsultBtn = document.getElementById('premiumConsultBtn');
+  const customiseBtn = document.getElementById('openCustomiseBtn') || document.getElementById('openLoginBtn');
   const consultModal = document.getElementById('consultationModal');
 
   function openConsultModal(e) {
@@ -147,6 +147,12 @@ function initHome2CtaHandlers() {
 
   if (premiumConsultBtn) {
     premiumConsultBtn.addEventListener('click', openConsultModal);
+  }
+
+  if (customiseBtn) {
+    customiseBtn.addEventListener('click', () => {
+      window.location.href = 'customise.html';
+    });
   }
 }
 

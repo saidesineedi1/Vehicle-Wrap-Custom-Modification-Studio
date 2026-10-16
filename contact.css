@@ -1,5 +1,4 @@
-
-
+﻿
 .contact-body {
   overflow-x: clip;
   background-color: var(--bg-primary);
@@ -782,7 +781,6 @@ body.theme-dark .cnt-addr-meta-list li a {
   transition: all 0.35s ease;
 }
 
-/* Light Mode Glass Hover: Border and content change color to rich gold */
 .cnt-map-link:hover {
   background: rgba(201, 169, 110, 0.16) !important;
   background-color: rgba(201, 169, 110, 0.16) !important;
@@ -807,7 +805,6 @@ body.theme-dark .cnt-addr-meta-list li a {
   filter: none !important;
 }
 
-/* Dark Mode: Resting is crisp white, hover changes color to luminous gold */
 body.theme-dark .cnt-map-link {
   border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
   color: #FFFFFF !important;

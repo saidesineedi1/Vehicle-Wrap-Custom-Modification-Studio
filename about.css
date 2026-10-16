@@ -1,5 +1,4 @@
-
-
+﻿
 .about-body {
   overflow-x: clip;
   background-color: var(--bg-primary);
@@ -41,7 +40,7 @@ body.theme-dark .abt-section-subtext {
   min-height: clamp(560px, 85vh, 840px);
   display: flex;
   align-items: center;
-  
+
   background-color: #FFFFFF;
   overflow: hidden;
   padding: clamp(68px, 8vw, 96px) 0 clamp(32px, 4vw, 44px) 0;

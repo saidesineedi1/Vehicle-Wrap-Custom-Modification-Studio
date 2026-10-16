@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
@@ -405,7 +404,7 @@ const BLOGS_DATABASE = {
   };
 
 const dom = {
-    
+
     breadcrumbTitle: document.getElementById('blgdBreadcrumbTitle'),
     categoryPill: document.getElementById('blgdCategoryPill'),
     categoryText: document.getElementById('blgdCategoryText'),

@@ -1,5 +1,4 @@
 ﻿
-
 document.addEventListener('DOMContentLoaded', () => {
   initAboutFaqAccordion();
   initAboutSmoothScroll();
@@ -74,6 +73,7 @@ function initAboutModalTriggers() {
   const consultModal = document.getElementById('consultationModal');
   const consultBtn = document.getElementById('abtConsultBtn');
   const smallCtaBtn = document.getElementById('abtOpenConsultModalBtn');
+  const customiseBtn = document.getElementById('openCustomiseBtn') || document.getElementById('openLoginBtn');
 
   function openConsultationModal(e) {
     if (e) e.preventDefault();
@@ -85,4 +85,9 @@ function initAboutModalTriggers() {
 
   if (consultBtn) consultBtn.addEventListener('click', openConsultationModal);
   if (smallCtaBtn) smallCtaBtn.addEventListener('click', openConsultationModal);
+  if (customiseBtn) {
+    customiseBtn.addEventListener('click', () => {
+      window.location.href = 'customise.html';
+    });
+  }
 }
